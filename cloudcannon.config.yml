@@ -5,6 +5,7 @@ paths:
 collections_config:
   pages:
     path: pages
+    url: /[slug]
     icon: wysiwyg
     disable_url: true
     disable_add: false
