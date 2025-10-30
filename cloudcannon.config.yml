@@ -7,7 +7,6 @@ collections_config:
     path: pages
     url: /[slug]
     icon: wysiwyg
-    disable_url: true
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
