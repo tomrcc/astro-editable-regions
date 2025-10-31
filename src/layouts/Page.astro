@@ -1,0 +1,14 @@
+---
+import Layout from "./Layout.astro";
+
+type Props = {
+  title: string;
+  content_blocks: any[];
+};
+
+const props = Astro.props;
+---
+
+<Layout {...props}>
+  <h1>{props.title}</h1>
+</Layout>

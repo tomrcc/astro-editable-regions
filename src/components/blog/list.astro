@@ -1,0 +1,18 @@
+---
+import PostSummary from "./summary.astro";
+const { posts } = Astro.props;
+---
+
+<div class="blog-article-grid">
+  {posts.map((post, i) => <PostSummary {...post} key={i} loading="eager" />)}
+</div>
+
+<style>
+  .blog-article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import BlogList from "../../components/blog/list.astro";
+import Layout from "../../layouts/Paginated.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const posts = await getCollection("blog");
+
+  return paginate(posts, {
+    pageSize: 6,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title="Blog Index">
+  <div class="blog-index">
+    <h1 class="blog-index-heading">Blog Index</h1>
+    <section>
+      <BlogList posts={page.data} />
+    </section>
+  </div>
+</Layout>
