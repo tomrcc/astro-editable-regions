@@ -35,9 +35,9 @@ const filteredPosts = posts.filter(
         {frontmatter.post_hero.image &&
           <img
             data-editable="image" /*1*/
-            data-prop-src="frontmatter.post_hero.image" /*2*/
-            data-prop-alt="frontmatter.post_hero.image_alt" /*3*/
-            data-prop-title="frontmatter.post_hero.heading" /*4*/
+            data-prop-src="post_hero.image" /*2*/
+            data-prop-alt="post_hero.image_alt" /*3*/
+            data-prop-title="post_hero.heading" /*4*/
             src={frontmatter.post_hero.image}
             title={frontmatter.post_hero.heading}
             alt={frontmatter.post_hero.image_alt}
