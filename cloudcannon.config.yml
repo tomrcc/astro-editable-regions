@@ -1,7 +1,7 @@
 timezone: Pacific/Auckland
 
 paths:
-  uploads: public/uploads
+  uploads: public/images
   static: public
  
 collections_config:
@@ -54,6 +54,14 @@ collections_config:
         path: '.cloudcannon/schemas/post.mdx'
     create:
       path: '[relative_base_path]/{filename|slugify|lowercase}.mdx'
+
+_inputs:
+  image:
+    type: image
+    options:
+      paths:
+        uploads: src/assets/images
+        static: ""
 
 markdown:
   engine: commonmark
