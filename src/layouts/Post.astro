@@ -30,7 +30,9 @@ const filteredPosts = posts.filter(
 <Layout {...frontmatter}>
   <div class="post-container">
     <article aria-labelled-by="blog-hero-text">
-      <PostHero {...frontmatter.post_hero} bodyContent={body} />
+      <editable-component data-prop="post_hero" data-component="PostHero">
+        <PostHero {...frontmatter.post_hero} bodyContent={body} />
+      </editable-component>
       <div class="hero-image">
         {frontmatter.post_hero.image &&
           <img
@@ -66,4 +68,10 @@ const filteredPosts = posts.filter(
       }
     </ul>
   </section>
+
+  <script>
+    if (window.inEditorMode) {
+      import "../scripts/register-components.js";
+    }
+  </script>
 </Layout>
