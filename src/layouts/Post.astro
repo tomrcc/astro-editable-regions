@@ -31,7 +31,7 @@ const filteredPosts = posts.filter(
   <div class="post-container">
     <article aria-labelled-by="blog-hero-text">
       <PostHero {...frontmatter.post_hero} bodyContent={body} />
-      <div class="markdown-text" data-pagefind-body>
+      <div class="markdown-text" data-prop="@content" data-pagefind-body>
         <slot />
       </div>
     </article>
