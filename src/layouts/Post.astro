@@ -70,8 +70,8 @@ const filteredPosts = posts.filter(
   </section>
 
   <script>
-    if (window.inEditorMode) {
-      import "../scripts/register-components.js";
+    if (window && window.inEditorMode) {
+      import("../scripts/register-components.js");
     }
   </script>
 </Layout>
