@@ -20,3 +20,15 @@ img {
   max-width: 100%;
   object-fit: cover;
 }
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
