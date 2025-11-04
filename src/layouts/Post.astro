@@ -33,19 +33,6 @@ const filteredPosts = posts.filter(
       <editable-component data-prop="post_hero" data-component="PostHero">
         <PostHero {...frontmatter.post_hero} bodyContent={body} />
       </editable-component>
-      <div class="hero-image">
-        {frontmatter.post_hero.image &&
-          <img
-            data-editable="image" /*1*/
-            data-prop-src="post_hero.image" /*2*/
-            data-prop-alt="post_hero.image_alt" /*3*/
-            data-prop-title="post_hero.heading" /*4*/
-            src={frontmatter.post_hero.image}
-            title={frontmatter.post_hero.heading}
-            alt={frontmatter.post_hero.image_alt}
-          />
-        }
-      </div>
       <div class="markdown-text" data-pagefind-body>
         <editable-text data-prop="@content">
           <slot />
@@ -72,7 +59,7 @@ const filteredPosts = posts.filter(
   <script>
     if (window && window.inEditorMode) {
       import("../scripts/register-components.js");
-      console.log(window)
+      console.log(window);
     }
   </script>
 </Layout>
