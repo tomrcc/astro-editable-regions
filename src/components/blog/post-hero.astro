@@ -38,15 +38,21 @@ const imageSrc = images[image]?.default || image;
 ---
 
 <div class="post-hero">
-  <Picture
-    class="blog-hero-image"
-    src={imageSrc}
-    alt={image_alt}
-    widths={[600, 800, 1200, 1400]}
-    sizes="(max-width: 1400px) 100vw, 1400px"
-    loading="eager"
-    formats={["avif", "webp"]}
-  />
+  <editable-image
+    data-editable="image"
+    data-prop-src="image"
+    data-prop-alt="image_alt"
+    data-prop-title="heading">
+    <Picture
+      class="blog-hero-image"
+      src={imageSrc}
+      alt={image_alt}
+      widths={[600, 800, 1200, 1400]}
+      sizes="(max-width: 1400px) 100vw, 1400px"
+      loading="eager"
+      formats={["avif", "webp"]}
+    />
+  </editable-image>
   <img
     data-editable="image"
     data-prop-src="image"
@@ -56,6 +62,13 @@ const imageSrc = images[image]?.default || image;
     alt={image_alt}
     title={heading}
   />
+  <editable-image
+    data-editable="image"
+    data-prop-src="image"
+    data-prop-alt="image_alt"
+    data-prop-title="heading">
+    <img src={image} alt={image_alt} title={heading} />
+  </editable-image>
   <h1 id="blog-hero-text" class="blog-hero-heading">{heading}</h1>
   <div class="blog-hero-tags">
     {
